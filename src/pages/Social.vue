@@ -9,7 +9,7 @@
         <span class="climate-font">Social</span>
       </h1>
       <p class="text-h6 text-medium-emphasis mb-6">
-        Friends and social media profiles.
+        kewl friends + my stuff
       </p>
 
       <v-tabs
@@ -179,9 +179,12 @@ const socialConfig: SocialConfig[] = [
     avatarOverride: 'https://github.com/Botspot.png',
   },
   {
+    username: 'meermax8',
+    displayName: 'Max',
+  },
+  {
     username: 'Sir-Encoded',
     displayName: 'Sir-Encoded',
-    note: 'kawaii frog',
   },
 ]
 
