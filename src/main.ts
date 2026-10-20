@@ -14,7 +14,7 @@ const router = createRouter({
   routes: [
     { path: '/', component: Home },
     { path: '/projects', component: () => import('./pages/Projects.vue') },
-    { path: '/social', component: () => import('./pages/Social.vue') },
+    { path: '/social/:tab(hoyo)?', component: () => import('./pages/Social.vue') },
     { path: '/:pathMatch(.*)*', component: () => import('./pages/NotFound.vue') },
   ],
 })

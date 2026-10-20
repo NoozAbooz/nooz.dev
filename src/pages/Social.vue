@@ -142,7 +142,8 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
 
 import HoyolabSection from '../components/social/hoyolab/HoyolabSection.vue'
 
@@ -196,7 +197,16 @@ const socialStates = ref<SocialState[]>(
   }))
 )
 
-const activeTab = ref<'github' | 'hoyolab'>('github')
+const route = useRoute()
+const router = useRouter()
+
+// /social -> GitHub tab, /social/hoyo -> HoYoLAB tab
+const activeTab = computed<'github' | 'hoyolab'>({
+  get: () => (route.params.tab === 'hoyo' ? 'hoyolab' : 'github'),
+  set: (tab) => {
+    router.replace(tab === 'hoyolab' ? '/social/hoyo' : '/social')
+  },
+})
 
 onMounted(async () => {
   await Promise.all(
