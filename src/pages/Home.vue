@@ -14,11 +14,11 @@
               <v-col cols="12" md="">
                 <div :class="$vuetify.display.mdAndUp ? '' : 'text-center'">
                   <h1 class="text-h2 text-md-h1 font-weight-bold mb-3">
-                    Hey, I'm <span class="climate-font">Nooz</span>
+                    i'm <span class="climate-font">michael</span>,
                   </h1>
 
                   <p class="text-h6 text-medium-emphasis mb-4">
-                    I make circuits and contribute to FOSS software.
+                    and I'm intending Electrical and Computer Engineering at UW Seattle.
                   </p>
 
                   <div class="mb-6">
